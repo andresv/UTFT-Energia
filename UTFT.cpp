@@ -976,10 +976,15 @@ void UTFT::print(char *st, int x, int y, int deg)
 	}
 
 	for (i=0; i<stl; i++)
+#ifdef DISABLE_CHAR_ROTATING
+		#pragma message("print char rotating disabled")
+		printChar(*st++, x + (i*(cfont.x_size)), y);
+#else
 		if (deg==0)
 			printChar(*st++, x + (i*(cfont.x_size)), y);
 		else
 			rotateChar(*st++, x, y, i, deg);
+#endif
 }
 
 void UTFT::print(String st, int x, int y, int deg)
