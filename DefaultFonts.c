@@ -11,6 +11,9 @@
 #elif defined(__arm__)
 	#define PROGMEM
 	#define fontdatatype const unsigned char
+#elif defined(__MSP430__)
+	#define PROGMEM
+	#define fontdatatype const unsigned char
 #endif
 
 // SmallFont.c 

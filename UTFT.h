@@ -140,6 +140,9 @@
 #elif defined(__arm__)
 	#include "Arduino.h"
 	#include "HW_ARM_defines.h"
+#elif defined(__MSP430__)
+	#include "Energia.h"
+	#include "HW_MSP430_defines.h"
 #endif
 
 struct _current_font

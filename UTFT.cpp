@@ -46,7 +46,11 @@
 */
 
 #include "UTFT.h"
-#include <pins_arduino.h>
+#if defined(__MSP430__)
+	#include <pins_energia.h>
+#else
+	#include <pins_arduino.h>
+#endif
 
 // Include hardware-specific functions for the correct MCU
 #if defined(__AVR__)
@@ -81,6 +85,9 @@
 	#else
 		#error "Unsupported ARM MCU!"
 	#endif
+#elif defined(__MSP430__)
+	#pragma message("Compiling for MSP430FR5739 Garage board...")
+	#include "HW_MSP430FR5739.h"
 #endif
 #include "memorysaver.h"
 
