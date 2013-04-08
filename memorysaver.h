@@ -27,3 +27,5 @@
 #define DISABLE_SSD1963_800		1	// ITDB50
 #define DISABLE_S6D1121			1	// ITDB24E	- This single define will disable both 8bit and 16bit mode for this controller
 #define DISABLE_ILI9320			1	// GEEE24 / GEEE28	- This single define will disable both 8bit and 16bit mode for this controller
+
+#define DISABLE_CHAR_ROTATING 	1	// Character rotating takes huge amount of code space, lets disable it for this platform

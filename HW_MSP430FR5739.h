@@ -1,7 +1,3 @@
-
-// *** Character rotating takes huge amount of code space, lets disable it for this platform ***
-#define DISABLE_CHAR_ROTATING
-
 // *** Hardwarespecific functions ***
 void UTFT::_hw_special_init()
 {
